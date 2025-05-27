@@ -1,0 +1,44 @@
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #0a1a7c 40%, #3bb3ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #3bb3ff;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(59,179,255,0.08);
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: #0a1a7c;
+}

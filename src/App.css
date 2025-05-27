@@ -1,38 +1,56 @@
+/* Base styles */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main app layout */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Section base styles — inherit theme */
+.hero-section,
+.features-section,
+.about-section,
+.signup-section,
+.footer,
+.signup-side-card,
+.feature-image-card {
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Signup section stays colored in light mode */
+.signup-section {
+  background-color: #3b2ff2;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Cards (light mode) */
+.signup-side-card,
+.feature-image-card {
+  background-color: #fff;
+  color: #3b2ff2;
 }
 
-.App-link {
-  color: #61dafb;
+/* Footer (light mode) */
+.footer {
+  background-color: #fff;
+  color: #222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Section titles */
+.feature-title,
+.about-title {
+  color: #a084f3;
+}
+
+/* Optional: Add smooth transitions */
+section, header, footer, button, input, textarea {
+  transition: background-color 0.3s cubic-bezier(.4,0,.2,1), color 0.3s cubic-bezier(.4,0,.2,1);
 }

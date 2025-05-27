@@ -1,0 +1,38 @@
+.about-section {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem 2rem 1rem;
+  text-align: center;
+  scroll-margin-top: 70px;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.highlight-purple {
+  color: #a084f3;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1.4rem;
+  font-style: italic;
+  max-width: 600px;
+}

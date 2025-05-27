@@ -1,0 +1,48 @@
+/* src/styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background: #f0f0f0;
+  color: #000;
+}
+
+body.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1rem;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark .header {
+  background-color: #1e1e1e;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.content {
+  padding: 2rem;
+}
