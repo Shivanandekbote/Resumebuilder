@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/Login.css";
-import { auth, provider, signInWithPopup } from "../services/firebase"; // Make sure this path is correct
+import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -11,16 +11,14 @@ const Login = () => {
   const [signupPassword, setSignupPassword] = useState("");
   const [signupConfirm, setSignupConfirm] = useState("");
 
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      alert(`Welcome, ${user.displayName}!\nEmail: ${user.email}`);
-      // Optional: Store user in context or localStorage
-    } catch (error) {
-      console.error("Google Sign-In Error", error);
-      alert("Google sign-in failed.");
-    }
+  const handleGoogleSuccess = (credentialResponse) => {
+    // You can decode the JWT or send it to your backend here
+    alert("Google sign-in successful!");
+    // Optional: Store user in context or localStorage
+  };
+
+  const handleGoogleError = () => {
+    alert("Google sign-in failed.");
   };
 
   const handleSignIn = (e) => {
@@ -91,10 +89,11 @@ const Login = () => {
 
             <button type="submit" className="login-btn">Login</button>
             <div className="login-divider">or</div>
-            <button type="button" className="google-login-btn" onClick={handleGoogleLogin}>
-              <span style={{ color: "#4285f4", fontWeight: "bold", marginRight: 8 }}>G</span>
-              Continue with Google
-            </button>
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={handleGoogleError}
+              width="100%"
+            />
           </form>
         ) : (
           <form className="login-form" onSubmit={handleSignUp}>
@@ -130,10 +129,11 @@ const Login = () => {
 
             <button type="submit" className="login-btn">Sign Up</button>
             <div className="login-divider">or</div>
-            <button type="button" className="google-login-btn" onClick={handleGoogleLogin}>
-              <span style={{ color: "#4285f4", fontWeight: "bold", marginRight: 8 }}>G</span>
-              Continue with Google
-            </button>
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={handleGoogleError}
+              width="100%"
+            />
           </form>
         )}
       </div>
