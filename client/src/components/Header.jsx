@@ -20,7 +20,7 @@ const Header = () => {
         <ul className="header-nav-list">
           <li><a href="#features" className="header-nav-link">Features</a></li>
           <li><a href="#opensource" className="header-nav-link">Open Source</a></li>
-          <li><a href="#sponsor" className="header-nav-link">Sponsor</a></li>
+          
           <li><a href="#about" className="header-nav-link">About Us</a></li>
         </ul>
       </nav>
